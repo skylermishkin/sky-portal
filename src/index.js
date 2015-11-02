@@ -8,7 +8,7 @@ import 'normalize.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
 // local imports
-import Root from './components/Root'
+import Root from './react-components/Root'
 
 
 // render the root component into the 'app' div
