@@ -4,9 +4,9 @@ import React, {Component} from 'react'
 import Nav from './nav/Nav'
 import Profile from './profile/Profile'
 import Exp from './exp/Exp'
-import NavContent from '../../content/nav-content'
-import ProfileContent from '../../content/profile-content'
-import ExpContent from '../../content/exp-content'
+import NavContent from '../content/home/nav-content'
+import ProfileContent from '../content/home/profile-content'
+import ExpContent from '../content/home/exp-content'
 
 export default class Root extends Component {
     render() {
