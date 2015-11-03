@@ -76,12 +76,12 @@
 	
 	// local imports
 	
-	var _componentsRoot = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/Root\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _reactComponentsRoot = __webpack_require__(353);
 	
-	var _componentsRoot2 = _interopRequireDefault(_componentsRoot);
+	var _reactComponentsRoot2 = _interopRequireDefault(_reactComponentsRoot);
 	
 	// render the root component into the 'app' div
-	_reactDom2['default'].render(_react2['default'].createElement(_componentsRoot2['default'], null), document.getElementById('app'));
+	_reactDom2['default'].render(_react2['default'].createElement(_reactComponentsRoot2['default'], null), document.getElementById('app'));
 
 /***/ },
 /* 2 */
@@ -25075,6 +25075,1043 @@
 	
 	module.exports = __webpack_require__(198);
 
+
+/***/ },
+/* 353 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// third party imports
+	'use strict';
+	
+	var _get = __webpack_require__(354)['default'];
+	
+	var _inherits = __webpack_require__(368)['default'];
+	
+	var _createClass = __webpack_require__(379)['default'];
+	
+	var _classCallCheck = __webpack_require__(382)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(196);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	// local imports
+	
+	var _navNav = __webpack_require__(383);
+	
+	var _navNav2 = _interopRequireDefault(_navNav);
+	
+	var _profileProfile = __webpack_require__(386);
+	
+	var _profileProfile2 = _interopRequireDefault(_profileProfile);
+	
+	var _expExp = __webpack_require__(389);
+	
+	var _expExp2 = _interopRequireDefault(_expExp);
+	
+	var _contentNavContent = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../../content/nav-content\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	var _contentNavContent2 = _interopRequireDefault(_contentNavContent);
+	
+	var _contentProfileContent = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../../content/profile-content\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	var _contentProfileContent2 = _interopRequireDefault(_contentProfileContent);
+	
+	var _contentExpContent = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../../content/exp-content\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	var _contentExpContent2 = _interopRequireDefault(_contentExpContent);
+	
+	var Root = (function (_Component) {
+	    _inherits(Root, _Component);
+	
+	    function Root() {
+	        _classCallCheck(this, Root);
+	
+	        _get(Object.getPrototypeOf(Root.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(Root, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                null,
+	                _react2['default'].createElement(_navNav2['default'], { content: _contentNavContent2['default'] }),
+	                _react2['default'].createElement(_profileProfile2['default'], { content: _contentProfileContent2['default'] }),
+	                _react2['default'].createElement(_expExp2['default'], { content: _contentExpContent2['default'] })
+	            );
+	        }
+	    }]);
+	
+	    return Root;
+	})(_react.Component);
+	
+	exports['default'] = Root;
+	module.exports = exports['default'];
+
+/***/ },
+/* 354 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _Object$getOwnPropertyDescriptor = __webpack_require__(355)["default"];
+	
+	exports["default"] = function get(_x, _x2, _x3) {
+	  var _again = true;
+	
+	  _function: while (_again) {
+	    var object = _x,
+	        property = _x2,
+	        receiver = _x3;
+	    _again = false;
+	    if (object === null) object = Function.prototype;
+	
+	    var desc = _Object$getOwnPropertyDescriptor(object, property);
+	
+	    if (desc === undefined) {
+	      var parent = Object.getPrototypeOf(object);
+	
+	      if (parent === null) {
+	        return undefined;
+	      } else {
+	        _x = parent;
+	        _x2 = property;
+	        _x3 = receiver;
+	        _again = true;
+	        desc = parent = undefined;
+	        continue _function;
+	      }
+	    } else if ("value" in desc) {
+	      return desc.value;
+	    } else {
+	      var getter = desc.get;
+	
+	      if (getter === undefined) {
+	        return undefined;
+	      }
+	
+	      return getter.call(receiver);
+	    }
+	  }
+	};
+	
+	exports.__esModule = true;
+
+/***/ },
+/* 355 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(356), __esModule: true };
+
+/***/ },
+/* 356 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(357);
+	__webpack_require__(358);
+	module.exports = function getOwnPropertyDescriptor(it, key){
+	  return $.getDesc(it, key);
+	};
+
+/***/ },
+/* 357 */
+/***/ function(module, exports) {
+
+	var $Object = Object;
+	module.exports = {
+	  create:     $Object.create,
+	  getProto:   $Object.getPrototypeOf,
+	  isEnum:     {}.propertyIsEnumerable,
+	  getDesc:    $Object.getOwnPropertyDescriptor,
+	  setDesc:    $Object.defineProperty,
+	  setDescs:   $Object.defineProperties,
+	  getKeys:    $Object.keys,
+	  getNames:   $Object.getOwnPropertyNames,
+	  getSymbols: $Object.getOwnPropertySymbols,
+	  each:       [].forEach
+	};
+
+/***/ },
+/* 358 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+	var toIObject = __webpack_require__(359);
+	
+	__webpack_require__(363)('getOwnPropertyDescriptor', function($getOwnPropertyDescriptor){
+	  return function getOwnPropertyDescriptor(it, key){
+	    return $getOwnPropertyDescriptor(toIObject(it), key);
+	  };
+	});
+
+/***/ },
+/* 359 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// to indexed object, toObject with fallback for non-array-like ES3 strings
+	var IObject = __webpack_require__(360)
+	  , defined = __webpack_require__(362);
+	module.exports = function(it){
+	  return IObject(defined(it));
+	};
+
+/***/ },
+/* 360 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// fallback for non-array-like ES3 and non-enumerable old V8 strings
+	var cof = __webpack_require__(361);
+	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
+	  return cof(it) == 'String' ? it.split('') : Object(it);
+	};
+
+/***/ },
+/* 361 */
+/***/ function(module, exports) {
+
+	var toString = {}.toString;
+	
+	module.exports = function(it){
+	  return toString.call(it).slice(8, -1);
+	};
+
+/***/ },
+/* 362 */
+/***/ function(module, exports) {
+
+	// 7.2.1 RequireObjectCoercible(argument)
+	module.exports = function(it){
+	  if(it == undefined)throw TypeError("Can't call method on  " + it);
+	  return it;
+	};
+
+/***/ },
+/* 363 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// most Object methods by ES6 should accept primitives
+	var $def  = __webpack_require__(364)
+	  , core  = __webpack_require__(366)
+	  , fails = __webpack_require__(367);
+	module.exports = function(KEY, exec){
+	  var $def = __webpack_require__(364)
+	    , fn   = (core.Object || {})[KEY] || Object[KEY]
+	    , exp  = {};
+	  exp[KEY] = exec(fn);
+	  $def($def.S + $def.F * fails(function(){ fn(1); }), 'Object', exp);
+	};
+
+/***/ },
+/* 364 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var global    = __webpack_require__(365)
+	  , core      = __webpack_require__(366)
+	  , PROTOTYPE = 'prototype';
+	var ctx = function(fn, that){
+	  return function(){
+	    return fn.apply(that, arguments);
+	  };
+	};
+	var $def = function(type, name, source){
+	  var key, own, out, exp
+	    , isGlobal = type & $def.G
+	    , isProto  = type & $def.P
+	    , target   = isGlobal ? global : type & $def.S
+	        ? global[name] : (global[name] || {})[PROTOTYPE]
+	    , exports  = isGlobal ? core : core[name] || (core[name] = {});
+	  if(isGlobal)source = name;
+	  for(key in source){
+	    // contains in native
+	    own = !(type & $def.F) && target && key in target;
+	    if(own && key in exports)continue;
+	    // export native or passed
+	    out = own ? target[key] : source[key];
+	    // prevent global pollution for namespaces
+	    if(isGlobal && typeof target[key] != 'function')exp = source[key];
+	    // bind timers to global for call from export context
+	    else if(type & $def.B && own)exp = ctx(out, global);
+	    // wrap global constructors for prevent change them in library
+	    else if(type & $def.W && target[key] == out)!function(C){
+	      exp = function(param){
+	        return this instanceof C ? new C(param) : C(param);
+	      };
+	      exp[PROTOTYPE] = C[PROTOTYPE];
+	    }(out);
+	    else exp = isProto && typeof out == 'function' ? ctx(Function.call, out) : out;
+	    // export
+	    exports[key] = exp;
+	    if(isProto)(exports[PROTOTYPE] || (exports[PROTOTYPE] = {}))[key] = out;
+	  }
+	};
+	// type bitmap
+	$def.F = 1;  // forced
+	$def.G = 2;  // global
+	$def.S = 4;  // static
+	$def.P = 8;  // proto
+	$def.B = 16; // bind
+	$def.W = 32; // wrap
+	module.exports = $def;
+
+/***/ },
+/* 365 */
+/***/ function(module, exports) {
+
+	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+	var global = module.exports = typeof window != 'undefined' && window.Math == Math
+	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
+	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
+
+/***/ },
+/* 366 */
+/***/ function(module, exports) {
+
+	var core = module.exports = {version: '1.2.4'};
+	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+
+/***/ },
+/* 367 */
+/***/ function(module, exports) {
+
+	module.exports = function(exec){
+	  try {
+	    return !!exec();
+	  } catch(e){
+	    return true;
+	  }
+	};
+
+/***/ },
+/* 368 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _Object$create = __webpack_require__(369)["default"];
+	
+	var _Object$setPrototypeOf = __webpack_require__(371)["default"];
+	
+	exports["default"] = function (subClass, superClass) {
+	  if (typeof superClass !== "function" && superClass !== null) {
+	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	  }
+	
+	  subClass.prototype = _Object$create(superClass && superClass.prototype, {
+	    constructor: {
+	      value: subClass,
+	      enumerable: false,
+	      writable: true,
+	      configurable: true
+	    }
+	  });
+	  if (superClass) _Object$setPrototypeOf ? _Object$setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	};
+	
+	exports.__esModule = true;
+
+/***/ },
+/* 369 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(370), __esModule: true };
+
+/***/ },
+/* 370 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(357);
+	module.exports = function create(P, D){
+	  return $.create(P, D);
+	};
+
+/***/ },
+/* 371 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(372), __esModule: true };
+
+/***/ },
+/* 372 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(373);
+	module.exports = __webpack_require__(366).Object.setPrototypeOf;
+
+/***/ },
+/* 373 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.3.19 Object.setPrototypeOf(O, proto)
+	var $def = __webpack_require__(364);
+	$def($def.S, 'Object', {setPrototypeOf: __webpack_require__(374).set});
+
+/***/ },
+/* 374 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// Works with __proto__ only. Old v8 can't work with null proto objects.
+	/* eslint-disable no-proto */
+	var getDesc  = __webpack_require__(357).getDesc
+	  , isObject = __webpack_require__(375)
+	  , anObject = __webpack_require__(376);
+	var check = function(O, proto){
+	  anObject(O);
+	  if(!isObject(proto) && proto !== null)throw TypeError(proto + ": can't set as prototype!");
+	};
+	module.exports = {
+	  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
+	    function(test, buggy, set){
+	      try {
+	        set = __webpack_require__(377)(Function.call, getDesc(Object.prototype, '__proto__').set, 2);
+	        set(test, []);
+	        buggy = !(test instanceof Array);
+	      } catch(e){ buggy = true; }
+	      return function setPrototypeOf(O, proto){
+	        check(O, proto);
+	        if(buggy)O.__proto__ = proto;
+	        else set(O, proto);
+	        return O;
+	      };
+	    }({}, false) : undefined),
+	  check: check
+	};
+
+/***/ },
+/* 375 */
+/***/ function(module, exports) {
+
+	module.exports = function(it){
+	  return typeof it === 'object' ? it !== null : typeof it === 'function';
+	};
+
+/***/ },
+/* 376 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var isObject = __webpack_require__(375);
+	module.exports = function(it){
+	  if(!isObject(it))throw TypeError(it + ' is not an object!');
+	  return it;
+	};
+
+/***/ },
+/* 377 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// optional / simple context binding
+	var aFunction = __webpack_require__(378);
+	module.exports = function(fn, that, length){
+	  aFunction(fn);
+	  if(that === undefined)return fn;
+	  switch(length){
+	    case 1: return function(a){
+	      return fn.call(that, a);
+	    };
+	    case 2: return function(a, b){
+	      return fn.call(that, a, b);
+	    };
+	    case 3: return function(a, b, c){
+	      return fn.call(that, a, b, c);
+	    };
+	  }
+	  return function(/* ...args */){
+	    return fn.apply(that, arguments);
+	  };
+	};
+
+/***/ },
+/* 378 */
+/***/ function(module, exports) {
+
+	module.exports = function(it){
+	  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
+	  return it;
+	};
+
+/***/ },
+/* 379 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _Object$defineProperty = __webpack_require__(380)["default"];
+	
+	exports["default"] = (function () {
+	  function defineProperties(target, props) {
+	    for (var i = 0; i < props.length; i++) {
+	      var descriptor = props[i];
+	      descriptor.enumerable = descriptor.enumerable || false;
+	      descriptor.configurable = true;
+	      if ("value" in descriptor) descriptor.writable = true;
+	
+	      _Object$defineProperty(target, descriptor.key, descriptor);
+	    }
+	  }
+	
+	  return function (Constructor, protoProps, staticProps) {
+	    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+	    if (staticProps) defineProperties(Constructor, staticProps);
+	    return Constructor;
+	  };
+	})();
+	
+	exports.__esModule = true;
+
+/***/ },
+/* 380 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(381), __esModule: true };
+
+/***/ },
+/* 381 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(357);
+	module.exports = function defineProperty(it, key, desc){
+	  return $.setDesc(it, key, desc);
+	};
+
+/***/ },
+/* 382 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	exports["default"] = function (instance, Constructor) {
+	  if (!(instance instanceof Constructor)) {
+	    throw new TypeError("Cannot call a class as a function");
+	  }
+	};
+	
+	exports.__esModule = true;
+
+/***/ },
+/* 383 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// third party imports
+	'use strict';
+	
+	var _get = __webpack_require__(354)['default'];
+	
+	var _inherits = __webpack_require__(368)['default'];
+	
+	var _createClass = __webpack_require__(379)['default'];
+	
+	var _classCallCheck = __webpack_require__(382)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(196);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	// local imports
+	
+	var _NavList = __webpack_require__(384);
+	
+	var _NavList2 = _interopRequireDefault(_NavList);
+	
+	/**
+	 * A top nav-bar with horizontally listed items.
+	 */
+	
+	var Nav = (function (_Component) {
+	    _inherits(Nav, _Component);
+	
+	    function Nav() {
+	        _classCallCheck(this, Nav);
+	
+	        _get(Object.getPrototypeOf(Nav.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(Nav, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'navBar' },
+	                _react2['default'].createElement(_NavList2['default'], { content: this.props.content })
+	            );
+	        }
+	    }]);
+	
+	    return Nav;
+	})(_react.Component);
+	
+	exports['default'] = Nav;
+	module.exports = exports['default'];
+
+/***/ },
+/* 384 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// third party imports
+	'use strict';
+	
+	var _get = __webpack_require__(354)['default'];
+	
+	var _inherits = __webpack_require__(368)['default'];
+	
+	var _createClass = __webpack_require__(379)['default'];
+	
+	var _classCallCheck = __webpack_require__(382)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(196);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	// local imports
+	
+	var _NavItem = __webpack_require__(385);
+	
+	var _NavItem2 = _interopRequireDefault(_NavItem);
+	
+	/**
+	 * A wrapper for horizontally listed items to be displayed in the Nav.
+	 */
+	
+	var NavList = (function (_Component) {
+	    _inherits(NavList, _Component);
+	
+	    function NavList() {
+	        _classCallCheck(this, NavList);
+	
+	        _get(Object.getPrototypeOf(NavList.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(NavList, [{
+	        key: 'render',
+	        value: function render() {
+	            var navNodes = this.props.content.nodes.map(function (node) {
+	                return _react2['default'].createElement(_NavItem2['default'], { title: node.title, hyperlink: node.hyperlink });
+	            });
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'navList' },
+	                navNodes
+	            );
+	        }
+	    }]);
+	
+	    return NavList;
+	})(_react.Component);
+	
+	exports['default'] = NavList;
+	module.exports = exports['default'];
+
+/***/ },
+/* 385 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// third party imports
+	'use strict';
+	
+	var _get = __webpack_require__(354)['default'];
+	
+	var _inherits = __webpack_require__(368)['default'];
+	
+	var _createClass = __webpack_require__(379)['default'];
+	
+	var _classCallCheck = __webpack_require__(382)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(196);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	/**
+	 * A wrapper for the Nav items/links.
+	 */
+	
+	var NavItem = (function (_Component) {
+	    _inherits(NavItem, _Component);
+	
+	    function NavItem() {
+	        _classCallCheck(this, NavItem);
+	
+	        _get(Object.getPrototypeOf(NavItem.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(NavItem, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'navItem' },
+	                _react2['default'].createElement(
+	                    'a',
+	                    { href: this.props.hyperlink },
+	                    _react2['default'].createElement(
+	                        'span',
+	                        null,
+	                        this.props.title
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return NavItem;
+	})(_react.Component);
+	
+	exports['default'] = NavItem;
+	module.exports = exports['default'];
+
+/***/ },
+/* 386 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// third party imports
+	'use strict';
+	
+	var _get = __webpack_require__(354)['default'];
+	
+	var _inherits = __webpack_require__(368)['default'];
+	
+	var _createClass = __webpack_require__(379)['default'];
+	
+	var _classCallCheck = __webpack_require__(382)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(196);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	// local imports
+	
+	var _Short = __webpack_require__(387);
+	
+	var _Short2 = _interopRequireDefault(_Short);
+	
+	var _Long = __webpack_require__(388);
+	
+	var _Long2 = _interopRequireDefault(_Long);
+	
+	/**
+	 * A left side-bar with a profile of the subject.
+	 */
+	
+	var Profile = (function (_Component) {
+	    _inherits(Profile, _Component);
+	
+	    function Profile() {
+	        _classCallCheck(this, Profile);
+	
+	        _get(Object.getPrototypeOf(Profile.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(Profile, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                null,
+	                _react2['default'].createElement(
+	                    'h2',
+	                    null,
+	                    this.props.content.title
+	                ),
+	                _react2['default'].createElement('img', { src: this.props.content.image }),
+	                _react2['default'].createElement(_Short2['default'], { text: this.props.content.short }),
+	                _react2['default'].createElement(_Long2['default'], { text: this.props.content.long })
+	            );
+	        }
+	    }]);
+	
+	    return Profile;
+	})(_react.Component);
+	
+	exports['default'] = Profile;
+	module.exports = exports['default'];
+
+/***/ },
+/* 387 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// third party imports
+	'use strict';
+	
+	var _get = __webpack_require__(354)['default'];
+	
+	var _inherits = __webpack_require__(368)['default'];
+	
+	var _createClass = __webpack_require__(379)['default'];
+	
+	var _classCallCheck = __webpack_require__(382)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(196);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	/**
+	 * A wrapper for a div holding a short description of the subject in the Profile element.
+	 */
+	
+	var Short = (function (_Component) {
+	    _inherits(Short, _Component);
+	
+	    function Short() {
+	        _classCallCheck(this, Short);
+	
+	        _get(Object.getPrototypeOf(Short.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(Short, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                null,
+	                _react2['default'].createElement(
+	                    'h3',
+	                    null,
+	                    'Quick Info'
+	                ),
+	                _react2['default'].createElement(
+	                    'span',
+	                    null,
+	                    this.props.text
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Short;
+	})(_react.Component);
+	
+	exports['default'] = Short;
+	module.exports = exports['default'];
+
+/***/ },
+/* 388 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// third party imports
+	'use strict';
+	
+	var _get = __webpack_require__(354)['default'];
+	
+	var _inherits = __webpack_require__(368)['default'];
+	
+	var _createClass = __webpack_require__(379)['default'];
+	
+	var _classCallCheck = __webpack_require__(382)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(196);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	/**
+	 * A wrapper for a div holding the long explanation of the subject in the Profile element.
+	 */
+	
+	var Long = (function (_Component) {
+	    _inherits(Long, _Component);
+	
+	    function Long() {
+	        _classCallCheck(this, Long);
+	
+	        _get(Object.getPrototypeOf(Long.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(Long, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                null,
+	                _react2['default'].createElement(
+	                    'h3',
+	                    null,
+	                    'More Info'
+	                ),
+	                _react2['default'].createElement(
+	                    'span',
+	                    null,
+	                    this.props.text
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Long;
+	})(_react.Component);
+	
+	exports['default'] = Long;
+	module.exports = exports['default'];
+
+/***/ },
+/* 389 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// third party imports
+	'use strict';
+	
+	var _get = __webpack_require__(354)['default'];
+	
+	var _inherits = __webpack_require__(368)['default'];
+	
+	var _createClass = __webpack_require__(379)['default'];
+	
+	var _classCallCheck = __webpack_require__(382)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(196);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	// local imports
+	
+	var _Tile = __webpack_require__(390);
+	
+	var _Tile2 = _interopRequireDefault(_Tile);
+	
+	/**
+	 * A right side div with content about the subject as tiles.
+	 */
+	
+	var Exp = (function (_Component) {
+	    _inherits(Exp, _Component);
+	
+	    function Exp() {
+	        _classCallCheck(this, Exp);
+	
+	        _get(Object.getPrototypeOf(Exp.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(Exp, [{
+	        key: 'render',
+	        value: function render() {
+	            var expNodes = this.props.content.nodes.map(function (node) {
+	                return _react2['default'].createElement(_Tile2['default'], { title: node.title, hyperlink: node.hyperlink, description: node.description });
+	            });
+	            return _react2['default'].createElement(
+	                'div',
+	                null,
+	                expNodes
+	            );
+	        }
+	    }]);
+	
+	    return Exp;
+	})(_react.Component);
+	
+	exports['default'] = Exp;
+	module.exports = exports['default'];
+
+/***/ },
+/* 390 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// third party imports
+	'use strict';
+	
+	var _get = __webpack_require__(354)['default'];
+	
+	var _inherits = __webpack_require__(368)['default'];
+	
+	var _createClass = __webpack_require__(379)['default'];
+	
+	var _classCallCheck = __webpack_require__(382)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(196);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	/**
+	 * A wrapper for a div with a hyperlink title and a description.
+	 */
+	
+	var ExpContent = (function (_Component) {
+	    _inherits(ExpContent, _Component);
+	
+	    function ExpContent() {
+	        _classCallCheck(this, ExpContent);
+	
+	        _get(Object.getPrototypeOf(ExpContent.prototype), 'constructor', this).apply(this, arguments);
+	    }
+	
+	    _createClass(ExpContent, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'Tile' },
+	                _react2['default'].createElement(
+	                    'a',
+	                    { href: this.props.hyperlink },
+	                    _react2['default'].createElement(
+	                        'h3',
+	                        null,
+	                        this.props.title
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'span',
+	                    null,
+	                    this.props.description
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return ExpContent;
+	})(_react.Component);
+	
+	exports['default'] = ExpContent;
+	module.exports = exports['default'];
 
 /***/ }
 /******/ ]);
