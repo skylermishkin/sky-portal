@@ -11,13 +11,17 @@ export default class Exp extends Component {
     render() {
         const expNodes = this.props.content.nodes.map((node) => {
             return (
-                <Tile title={node.title} hyperlink={node.hyperlink} description={node.description} />
+                <Tile key={node.title} title={node.title} hyperlink={node.hyperlink} description={node.description} />
             )
         })
         return (
-            <div>
+            <div id='exp' style={styles} >
                 {expNodes}
             </div>
         )
     }
+}
+
+const styles = {
+    float: 'left',
 }

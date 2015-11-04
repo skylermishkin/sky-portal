@@ -4,7 +4,8 @@
 
 export default {
     title: 'Skyler Mishkin',
-    image: '',
-    short: 'this is short',
+    image: 'src/content/home/profile-pic.JPG',
+    short: {bullets: ['Age: 24', 'Status: dank'],
+        text: 'this is short'},
     long: 'this is longerrrrrrrrr',
 }

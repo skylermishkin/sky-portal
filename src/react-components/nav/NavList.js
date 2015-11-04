@@ -11,13 +11,27 @@ export default class NavList extends Component {
     render() {
         const navNodes = this.props.content.nodes.map((node) => {
             return (
-                <NavItem title={node.title} hyperlink={node.hyperlink} />
+                <li key={node.title} style={liStyles}>
+                    <NavItem title={node.title} hyperlink={node.hyperlink} />
+                </li>
             )
         })
         return (
             <div className='navList'>
-                {navNodes}
+                <ul style={ulStyles}>
+                    {navNodes}
+                </ul>
             </div>
         )
     }
+}
+
+const ulStyles = {
+    listStyleType: 'none',
+    overflow: 'hidden',
+}
+const liStyles = {
+    margin: 'none',
+    padding: '5px 0px',
+    float: 'left',
 }

@@ -5,5 +5,7 @@
 export default {
     nodes: [{title: 'Home', hyperlink: ''},
         {title: 'Ongoing Work', hyperlink: ''},
-        {title: 'Completed Projects', hyperlink: ''}],
+        {title: 'Completed Projects', hyperlink: ''},
+        {title: 'Contact', hyperlink: ''},
+        {title: 'About', hyperlink: ''}],
 }

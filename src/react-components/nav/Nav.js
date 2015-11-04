@@ -10,9 +10,15 @@ import NavList from './NavList'
 export default class Nav extends Component {
     render() {
         return (
-            <div className='navBar'>
+            <div id='navBar' style={styles}>
                 <NavList content={this.props.content} />
             </div>
         )
     }
+}
+
+const styles = {
+    margin: 'none',
+    padding: '2px',
+    backgroundColor: 'rgb(45,45,45)',
 }

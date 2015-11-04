@@ -10,9 +10,16 @@ export default class NavItem extends Component {
         return (
             <div className='navItem'>
                 <a href={this.props.hyperlink}>
-                    <span>{this.props.title}</span>
+                    <span style={styles}>{this.props.title}</span>
                 </a>
             </div>
         )
     }
+}
+
+const styles = {
+    display: 'block',
+    padding: '5px 10px',
+    margin: '0px 10px',
+    backgroundColor: 'rgb(225,225,225)',
 }
