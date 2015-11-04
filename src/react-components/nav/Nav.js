@@ -19,6 +19,6 @@ export default class Nav extends Component {
 
 const styles = {
     margin: 'none',
-    padding: '2px',
+    padding: '0.1em',
     backgroundColor: 'rgb(45,45,45)',
 }

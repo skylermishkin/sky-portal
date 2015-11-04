@@ -12,7 +12,7 @@ export default class Profile extends Component {
     render() {
         return (
             <div id='profile' style={styles} >
-                <h2>{this.props.content.title}</h2>
+                <h1 >{this.props.content.title}</h1>
                 <img src={this.props.content.image} style={imgStyles} />
                 <Short bullets={this.props.content.short.bullets} text={this.props.content.short.text} />
                 <Long text={this.props.content.long} />
@@ -22,10 +22,12 @@ export default class Profile extends Component {
 }
 
 const styles = {
-    padding: '10px',
-    width: '40%',
+    padding: '2%',
+    width: '38%',
+    height: '50em',
+    overflow: 'auto',
     float: 'left',
 }
 const imgStyles = {
-    width: '85%',
+    width: '15em',
 }

@@ -24,4 +24,6 @@ export default class Exp extends Component {
 
 const styles = {
     float: 'left',
+    padding: 'none',
+    width: '55%',
 }

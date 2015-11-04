@@ -32,6 +32,6 @@ const ulStyles = {
 }
 const liStyles = {
     margin: 'none',
-    padding: '5px 0px',
+    padding: '0.2em 0em',
     float: 'left',
 }

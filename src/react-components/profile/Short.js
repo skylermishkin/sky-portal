@@ -16,7 +16,7 @@ export default class Short extends Component {
         })
         return (
             <div>
-                <h3>Quick Info</h3>
+                <h2>Quick Info</h2>
                 <ul>
                     {bullets}
                 </ul>

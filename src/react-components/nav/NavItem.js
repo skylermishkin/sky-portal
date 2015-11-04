@@ -8,9 +8,9 @@ import React, {Component} from 'react'
 export default class NavItem extends Component {
     render() {
         return (
-            <div className='navItem'>
+            <div className='navItem' style={styles} >
                 <a href={this.props.hyperlink}>
-                    <span style={styles}>{this.props.title}</span>
+                    <span style={spanStyles}>{this.props.title}</span>
                 </a>
             </div>
         )
@@ -19,7 +19,12 @@ export default class NavItem extends Component {
 
 const styles = {
     display: 'block',
-    padding: '5px 10px',
-    margin: '0px 10px',
+    padding: '0.5em 1em',
+    margin: '0em 1em',
     backgroundColor: 'rgb(225,225,225)',
+    borderRadius: '0.3em',
+}
+const spanStyles = {
+    fontSize: '1.2em',
+    fontWeight: 'bold',
 }
